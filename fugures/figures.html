@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1/dist/tailwind.min.css" rel="stylesheet" type="text/css"/>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@1.14.0/dist/full.css" rel="stylesheet" type="text/css"/>
+    <title>Figuras Geométricas</title>
+</head>
+<body>
+<header class="container mx-auto px-4 md:container md:mx-auto">
+    <div class="navbar mb-2 shadow-lg bg-neutral text-neutral-content rounded-box">
+        <div class="flex-1 px-2 mx-2">
+    <span class="text-lg font-bold">
+            Figuras Geométricas
+          </span>
+        </div>
+        <div class="flex-none">
+            <button class="btn btn-square btn-ghost">
+                1
+            </button>
+        </div>
+        <div class="flex-none">
+            <button class="btn btn-square btn-ghost">
+                2
+            </button>
+        </div>
+    </div>
+</header>
+<section class="container mx-auto px-4 md:container md:mx-auto">
+    <h2 class="card-title">Calcula el área y perímetro de un cuadrado</h2>
+
+    <div class="grid sm:grid-cols-1 md:grid-cols-3 gap-4">
+        <ul class="menu p-4 overflow-y-auto w-auto bg-base-200 text-base-content card">
+            <li>
+                <a><img class="w-10 mr-5" src="img/Square.svg" alt="Square">Cuadrado</a>
+            </li>
+            <li>
+                <a><img class="w-10 mr-5" src="img/Triangle.svg" alt="Square">Triangulo</a>
+            </li>
+            <li>
+                <a><img class="w-10 mr-5" src="img/Circle.svg" alt="Square">Circulo</a>
+            </li>
+        </ul>
+        <div class="md:col-span-2">
+            <!-- SQUARE -->
+            <div class="card bg-base-200">
+                <div class="card-body">
+                    <h2 class="card-title">Cuadrado</h2>
+                    <form>
+                        <div class="form-control mb-5">
+                            <label for="squareInput" class="label">
+                                <span class="label-text">Lado</span>
+                            </label>
+                            <input id="squareInput" type="number" class="input" placeholder="Introduce la medidad del lado..." required/>
+                        </div>
+                        <div class="form-control mb-5">
+                            <label class="cursor-pointer label">
+                                <span class="label-text">Perímetro</span>
+                                <input id="squarePerimeterCheckbox" type="checkbox" checked="checked" class="toggle toggle-primary">
+                            </label>
+                        </div>
+                        <div class="form-control mb-5">
+                            <label class="cursor-pointer label">
+                                <span class="label-text">Área</span>
+                                <input id="squareAreaCheckbox" type="checkbox" checked="checked" class="toggle toggle-primary">
+                            </label>
+                        </div>
+                        <button id="squareCalculateButton" type="button" class="btn btn-primary" onclick="calculateSquare()">Calcular perímetro</button>
+                    </form>
+                </div>
+            </div>
+            <!-- SQUARE END -->
+            <!-- TRIANGLE -->
+            <!-- TRIANGLE END -->
+        </div>
+    </div>
+</section>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="js/figures.js"></script>
+</body>
+</html>
